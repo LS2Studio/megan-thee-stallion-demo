@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Megan Thee Stallion | Tina Snow Is Back | ACT III</title>
+<meta name="description" content="Megan Thee Stallion. Tina Snow is back. ACT III coming soon. Music, tour, merch, and everything Hot Girl.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --hot-pink: #ff2d92;
+    --ice-blue: #a8e6ff;
+    --gold: #ffd700;
+    --purple: #7b2ff7;
+    --red: #ff2d2d;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); overflow-x: hidden; }
+  
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 20px 32px; display: flex; justify-content: space-between; align-items: center; background: rgba(10,10,10,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .nav-logo { font-family: 'Anton', sans-serif; font-size: 24px; letter-spacing: 2px; text-transform: uppercase; }
+  .nav-logo span { color: var(--hot-pink); }
+  .nav-links { display: flex; gap: 32px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
+  .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--hot-pink); }
+  .nav-cta { background: var(--hot-pink); color: white; padding: 10px 20px; border-radius: 50px; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; }
+  
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 24px 80px; position: relative; background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 50%, #0a0a0a 100%); overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 50% 30%, rgba(255,45,146,0.3) 0%, transparent 60%); }
+  .hero-badge { position: relative; z-index: 1; background: var(--hot-pink); color: white; padding: 8px 20px; border-radius: 50px; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 32px; transform: rotate(-2deg); }
+  .hero h1 { position: relative; z-index: 1; font-family: 'Anton', sans-serif; font-size: clamp(60px, 12vw, 160px); line-height: 0.9; text-transform: uppercase; letter-spacing: -2px; margin-bottom: 16px; }
+  .hero h1 .tina { color: var(--ice-blue); font-style: italic; font-family: 'Playfair Display', serif; font-weight: 900; text-transform: none; letter-spacing: 0; }
+  .hero h1 .snow { color: var(--white); }
+  .hero-sub { position: relative; z-index: 1; font-size: clamp(18px, 3vw, 28px); font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 16px; }
+  .hero-sub em { color: var(--hot-pink); font-style: normal; }
+  .hero-tagline { position: relative; z-index: 1; font-size: 16px; color: rgba(255,255,255,0.6); max-width: 600px; line-height: 1.6; margin-bottom: 40px; }
+  .hero-buttons { position: relative; z-index: 1; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .btn-primary { background: var(--hot-pink); color: white; padding: 16px 32px; border-radius: 50px; font-size: 14px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: transform 0.3s; }
+  .btn-primary:hover { transform: scale(1.05); }
+  .btn-outline { background: transparent; color: white; padding: 16px 32px; border: 2px solid white; border-radius: 50px; font-size: 14px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: all 0.3s; }
+  .btn-outline:hover { background: white; color: black; }
+  
+  /* MARQUEE */
+  .marquee { background: var(--hot-pink); color: white; padding: 16px 0; overflow: hidden; white-space: nowrap; font-family: 'Anton', sans-serif; font-size: 20px; text-transform: uppercase; letter-spacing: 2px; }
+  .marquee span { display: inline-block; padding: 0 20px; animation: marquee 20s linear infinite; }
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  
+  /* SECTION */
+  .section { max-width: 1200px; margin: 0 auto; padding: 100px 24px; }
+  .section-label { font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; color: var(--hot-pink); margin-bottom: 16px; }
+  .section h2 { font-family: 'Anton', sans-serif; font-size: clamp(40px, 7vw, 72px); line-height: 1; text-transform: uppercase; margin-bottom: 24px; }
+  .section-intro { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.7); max-width: 700px; margin-bottom: 48px; }
+  
+  /* ACT III */
+  .act-iii { background: linear-gradient(135deg, #0a1a2a 0%, #1a0a2a 100%); border-radius: 32px; padding: 80px 48px; text-align: center; position: relative; overflow: hidden; }
+  .act-iii::before { content: '❄️'; position: absolute; font-size: 200px; opacity: 0.05; top: -40px; right: -40px; }
+  .act-iii h3 { font-family: 'Anton', sans-serif; font-size: clamp(48px, 8vw, 96px); line-height: 0.9; text-transform: uppercase; margin-bottom: 16px; }
+  .act-iii h3 .act { color: var(--ice-blue); }
+  .act-iii p { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 32px; }
+  .act-iii .quote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 24px; color: var(--ice-blue); margin-bottom: 32px; }
+  
+  /* MUSIC GRID */
+  .music-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .album { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 32px; transition: transform 0.3s, border-color 0.3s; }
+  .album:hover { transform: translateY(-4px); border-color: var(--hot-pink); }
+  .album-year { font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: var(--hot-pink); margin-bottom: 12px; }
+  .album h3 { font-family: 'Anton', sans-serif; font-size: 28px; text-transform: uppercase; margin-bottom: 12px; }
+  .album p { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 20px; }
+  .album-link { color: var(--hot-pink); font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; }
+  
+  /* VENTURES */
+  .ventures { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .venture { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 40px; position: relative; overflow: hidden; }
+  .venture-icon { font-size: 48px; margin-bottom: 20px; }
+  .venture h3 { font-family: 'Anton', sans-serif; font-size: 28px; text-transform: uppercase; margin-bottom: 12px; }
+  .venture p { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 20px; }
+  .venture-tag { display: inline-block; background: rgba(255,45,146,0.2); color: var(--hot-pink); padding: 6px 12px; border-radius: 50px; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
+  
+  /* STATS */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+  .stat-number { font-family: 'Anton', sans-serif; font-size: 48px; color: var(--hot-pink); margin-bottom: 8px; }
+  .stat-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.6); }
+  
+  /* TOUR */
+  .tour-list { display: flex; flex-direction: column; gap: 16px; }
+  .tour-date { display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 24px 32px; flex-wrap: wrap; gap: 16px; }
+  .tour-date-info h3 { font-size: 20px; margin-bottom: 4px; }
+  .tour-date-info p { font-size: 14px; color: rgba(255,255,255,0.6); }
+  .tour-date-btn { background: var(--hot-pink); color: white; padding: 12px 24px; border-radius: 50px; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; white-space: nowrap; }
+  
+  /* MERCH PREVIEW */
+  .merch-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .merch-item { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; }
+  .merch-item-image { aspect-ratio: 1; background: linear-gradient(135deg, #ff2d92 0%, #7b2ff7 100%); display: flex; align-items: center; justify-content: center; font-size: 48px; }
+  .merch-item-info { padding: 20px; }
+  .merch-item-info h3 { font-size: 16px; margin-bottom: 4px; }
+  .merch-item-info p { font-size: 14px; color: var(--hot-pink); font-weight: 700; }
+  
+  /* CTA */
+  .cta { background: var(--hot-pink); border-radius: 32px; padding: 80px 48px; text-align: center; }
+  .cta h2 { font-family: 'Anton', sans-serif; font-size: clamp(40px, 7vw, 72px); line-height: 1; text-transform: uppercase; margin-bottom: 16px; color: white; }
+  .cta p { font-size: 18px; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+  .cta .btn-primary { background: white; color: var(--hot-pink); }
+  
+  /* FOOTER */
+  footer { max-width: 1200px; margin: 0 auto; padding: 60px 24px 40px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+  footer .logo { font-family: 'Anton', sans-serif; font-size: 24px; text-transform: uppercase; }
+  footer .logo span { color: var(--hot-pink); }
+  footer p { font-size: 13px; color: rgba(255,255,255,0.5); }
+  .social-links { display: flex; gap: 16px; }
+  .social-links a { color: white; text-decoration: none; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .social-links a:hover { color: var(--hot-pink); }
+  
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .music-grid { grid-template-columns: 1fr; }
+    .ventures { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .merch-grid { grid-template-columns: 1fr 1fr; }
+    .act-iii { padding: 48px 24px; }
+    .cta { padding: 48px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">MEGAN <span>THEE</span> STALLION</div>
+  <div class="nav-links">
+    <a href="#music">Music</a>
+    <a href="#act-iii">Act III</a>
+    <a href="#tour">Tour</a>
+    <a href="#ventures">Ventures</a>
+    <a href="#merch">Merch</a>
+  </div>
+  <a href="#act-iii" class="nav-cta">Act III Coming Soon</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">❄️ Tina Snow Is Back ❄️</div>
+  <h1><span class="tina">Tina</span> <span class="snow">Snow</span><br>Megan<br>Thee Stallion</h1>
+  <p class="hero-sub">Houston's Hottie. <em>Grammy Winner.</em> Broadway Star. CEO.</p>
+  <p class="hero-tagline">Tina is grown now, babe. She has been through lots of life since y'all heard from her last. ACT III is coming, and it's going to be one of my favorite projects I ever put out.</p>
+  <div class="hero-buttons">
+    <a href="#act-iii" class="btn-primary">Pre-Save Act III →</a>
+    <a href="#music" class="btn-outline">Listen to the Music</a>
+  </div>
+</section>
+
+<div class="marquee">
+  <span>Hot Girl Summer • Tina Snow • Act III • Hottie • Real Hot Girl Sh*t • Tina Snow • Act III • Hottie • Real Hot Girl Sh*t •</span>
+</div>
+
+<section class="section" id="act-iii">
+  <div class="act-iii">
+    <div class="section-label" style="color: var(--ice-blue);">The Next Chapter</div>
+    <h3><span class="act">Act III</span><br>Coming Soon</h3>
+    <p class="quote">"Tina is grown now, babe. She has been through lots of life since y'all heard from her last."</p>
+    <p>Megan's fourth studio album brings back her iconic alter ego Tina Snow for a proper reintroduction. After two years of taking her time in the studio, ACT III features the collaborations Hotties have been asking for, including some that will really gag you. Released through Hot Girl Productions with Interscope Records handling global distribution. Megan retains full ownership of her masters and publishing.</p>
+    <a href="https://megantheestallion.lnk.to/ActIII" class="btn-primary" style="background: var(--ice-blue); color: var(--black);">Pre-Save on Spotify →</a>
+  </div>
+</section>
+
+<section class="section" id="music">
+  <div class="section-label">The Music</div>
+  <h2>From Tina Snow<br>To Megan</h2>
+  <p class="section-intro">Three albums. Three acts. One unstoppable run. From the Tina Snow mixtape that started it all to the self-titled MEGAN, every project is a chapter in the Hot Girl story.</p>
+  
+  <div class="music-grid">
+    <div class="album">
+      <div class="album-year">2024 • Act II</div>
+      <h3>Megan</h3>
+      <p>Her third studio album. Debuted at No. 3 on the Billboard 200. Featuring "HISS," "Cobra," and "BOA." Released independently through Hot Girl Productions.</p>
+      <a href="https://megantheestallion.lnk.to/megan" class="album-link">Listen Now →</a>
+    </div>
+    <div class="album">
+      <div class="album-year">2022</div>
+      <h3>Traumazine</h3>
+      <p>Her second studio album. Featuring "Sweetest Pie" with Dua Lipa, "Her," and "Plan B." Raw, honest, and unapologetic.</p>
+      <a href="https://megantheestallion.ffm.to/traumazine" class="album-link">Listen Now →</a>
+    </div>
+    <div class="album">
+      <div class="album-year">2020</div>
+      <h3>Good News</h3>
+      <p>Her debut studio album. Featuring "Savage" (Remix) with Beyoncé, "WAP" with Cardi B, and "Body." Grammy Award winner for Best Rap Performance.</p>
+      <a href="https://megantheestallion.ffm.to/goodnews" class="album-link">Listen Now →</a>
+    </div>
+    <div class="album">
+      <div class="album-year">2019</div>
+      <h3>Fever</h3>
+      <p>Her debut mixtape. Featuring "Hot Girl Summer" with Nicki Minaj and Ty Dolla $ign. The project that launched a movement.</p>
+      <a href="https://megantheestallion.ffm.to/fever" class="album-link">Listen Now →</a>
+    </div>
+    <div class="album">
+      <div class="album-year">2018</div>
+      <h3>Tina Snow</h3>
+      <p>Her second EP. The introduction of Tina Snow. Featuring "Big Ole Freak," the song that put Megan on the map.</p>
+      <a href="https://megantheestallion.ffm.to/tinasnow" class="album-link">Listen Now →</a>
+    </div>
+    <div class="album">
+      <div class="album-year">2020</div>
+      <h3>Suga</h3>
+      <p>Her third EP. Featuring "Savage" and "B.I.T.C.H." The project that showed Megan's range, from rap to R&B to pop.</p>
+      <a href="https://megantheestallion.ffm.to/suga" class="album-link">Listen Now →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ventures">
+  <div class="section-label">Beyond Music</div>
+  <h2>More Than<br>An Artist</h2>
+  <p class="section-intro">Megan is building an empire. From Broadway to tequila to swimwear, she's proving that Hotties can do it all.</p>
+  
+  <div class="ventures">
+    <div class="venture">
+      <div class="venture-icon">🎭</div>
+      <h3>Broadway Star</h3>
+      <p>Made Broadway history in 2026 as Zidler in Moulin Rouge! The Musical, becoming the first female performer in that role. Wrapped her run in April 2026.</p>
+      <span class="venture-tag">Moulin Rouge! The Musical</span>
+    </div>
+    <div class="venture">
+      <div class="venture-icon">🥃</div>
+      <h3>Chicas Divertidas</h3>
+      <p>Her tequila brand. Chicas Divertidas Tequila is for the girls who like to have fun. Available nationwide.</p>
+      <span class="venture-tag">@chicasdivertidastequila</span>
+    </div>
+    <div class="venture">
+      <div class="venture-icon">👙</div>
+      <h3>Hot Girl Summer Swim</h3>
+      <p>Her swimwear line. Bikinis, one-pieces, cover-ups, and more. Designed for Hotties of all shapes and sizes.</p>
+      <span class="venture-tag">Shop the Collection</span>
+    </div>
+    <div class="venture">
+      <div class="venture-icon">🌸</div>
+      <h3>Hot Girl Summer Perfume</h3>
+      <p>Her fragrance with Coty. Hot Girl Summer, The Orchid Vetiver Eau de Parfum. Bold, floral, and unforgettable.</p>
+      <span class="venture-tag">Available Now</span>
+    </div>
+    <div class="venture">
+      <div class="venture-icon">🏢</div>
+      <h3>Hot Girl Productions</h3>
+      <p>Her independent entertainment company. Megan owns her masters and publishing. Full creative control, always.</p>
+      <span class="venture-tag">Independent & Owned</span>
+    </div>
+    <div class="venture">
+      <div class="venture-icon">🍽️</div>
+      <h3>Restaurant Owner</h3>
+      <p>Megan has expanded into restaurant ownership, bringing her Houston roots to the food scene.</p>
+      <span class="venture-tag">Houston, TX</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="stats">
+    <div>
+      <div class="stat-number">32M+</div>
+      <div class="stat-label">Instagram Followers</div>
+    </div>
+    <div>
+      <div class="stat-number">3</div>
+      <div class="stat-label">Grammy Awards</div>
+    </div>
+    <div>
+      <div class="stat-number">10+</div>
+      <div class="stat-label">Billboard Hot 100 Hits</div>
+    </div>
+    <div>
+      <div class="stat-number">2017</div>
+      <div class="stat-label">Tina Snow Era Began</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tour">
+  <div class="section-label">Live</div>
+  <h2>See Megan<br>Live</h2>
+  <p class="section-intro">The Hot Girl Summer Tour was just the beginning. Stay tuned for ACT III tour dates.</p>
+  
+  <div class="tour-list">
+    <div class="tour-date">
+      <div class="tour-date-info">
+        <h3>Hot Girl Summer Tour 2024</h3>
+        <p>North America • Completed • 36 shows</p>
+      </div>
+      <a href="#" class="tour-date-btn">Watch Recap</a>
+    </div>
+    <div class="tour-date">
+      <div class="tour-date-info">
+        <h3>Coachella 2025</h3>
+        <p>Indio, CA • April 20, 2025 • Headliner</p>
+      </div>
+      <a href="#" class="tour-date-btn">Watch Performance</a>
+    </div>
+    <div class="tour-date">
+      <div class="tour-date-info">
+        <h3>ACT III Tour</h3>
+        <p>Coming Soon • Sign up for presale access</p>
+      </div>
+      <a href="#cta" class="tour-date-btn">Get Notified</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="merch">
+  <div class="section-label">Shop</div>
+  <h2>Hot Girl<br>Summer 2026</h2>
+  <p class="section-intro">The latest drop. Swimwear, merch, and the Hot Girl Summer perfume. Hotties only.</p>
+  
+  <div class="merch-grid">
+    <div class="merch-item">
+      <div class="merch-item-image">👙</div>
+      <div class="merch-item-info">
+        <h3>Hot Girl Summer One Piece</h3>
+        <p>$32.00</p>
+      </div>
+    </div>
+    <div class="merch-item">
+      <div class="merch-item-image">🌸</div>
+      <div class="merch-item-info">
+        <h3>Hot Girl Summer Perfume</h3>
+        <p>$68.00</p>
+      </div>
+    </div>
+    <div class="merch-item">
+      <div class="merch-item-image">👗</div>
+      <div class="merch-item-info">
+        <h3>Thee Shell Skirt</h3>
+        <p>$24.00</p>
+      </div>
+    </div>
+    <div class="merch-item">
+      <div class="merch-item-image">🧢</div>
+      <div class="merch-item-info">
+        <h3>Hottie Cap</h3>
+        <p>$35.00</p>
+      </div>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 32px;">
+    <a href="https://store.megantheestallion.com/" class="btn-primary">Shop All 46 Products →</a>
+  </div>
+</section>
+
+<section class="section" id="cta">
+  <div class="cta">
+    <h2>Join the<br>Hottie Community</h2>
+    <p>Get first access to ACT III, tour presales, merch drops, and exclusive content. Text Megan at (832) 210-1202 or sign up below.</p>
+    <a href="https://megantheestallion.lnk.to/subscribe" class="btn-primary">Subscribe Now →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">MEGAN <span>THEE</span> STALLION</div>
+  <div class="social-links">
+    <a href="https://instagram.com/theestallion">Instagram</a>
+    <a href="https://twitter.com/theestallion">Twitter</a>
+    <a href="https://tiktok.com/@theestallion">TikTok</a>
+    <a href="https://youtube.com/@MeganTheeStallion">YouTube</a>
+    <a href="https://open.spotify.com/artist/181bsRPaVXVlUKc9ZqZ9Zq">Spotify</a>
+  </div>
+  <p>© 2026 Hot Girl Productions. All rights reserved.</p>
+  <p>Demo redesign by <a href="https://lexissapphirestudio.com/" style="color: var(--hot-pink); text-decoration: none;">Lexis Sapphire Studio</a></p>
+</footer>
+
+</body>
+</html>

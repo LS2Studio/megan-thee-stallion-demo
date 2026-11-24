@@ -31,8 +31,7 @@
   
   /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 20px 32px; display: flex; justify-content: space-between; align-items: center; background: rgba(10,10,10,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .nav-logo { font-family: 'Anton', sans-serif; font-size: 24px; letter-spacing: 2px; text-transform: uppercase; }
-  .nav-logo span { color: var(--hot-pink); }
+  .nav-logo img { height: 40px; width: auto; display: block; }
   .nav-links { display: flex; gap: 32px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
   .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
   .nav-links a:hover { color: var(--hot-pink); }
@@ -130,7 +129,7 @@
     .nav-links { display: none; }
     .nav-cta { display: none; }
     nav { padding: 16px 20px; }
-    .nav-logo { font-size: 18px; }
+    .nav-logo img { height: 28px; }
     .music-grid { grid-template-columns: 1fr; }
     .ventures { grid-template-columns: 1fr; }
     .stats { grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -214,7 +213,7 @@
 </script>
 
 <nav>
-  <div class="nav-logo">MEGAN <span>THEE</span> STALLION</div>
+  <div class="nav-logo"><img src="https://store.megantheestallion.com/cdn/shop/files/LOGO_FOR_WEBSITE_-_HGS_500x.png?v=1710939021" alt="Megan Thee Stallion" style="height: 40px; width: auto; display: block;"></div>
   <div class="nav-links">
     <a href="#act-iii">Act III</a>
     <a href="#videos">Videos</a>
